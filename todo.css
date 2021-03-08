@@ -8,19 +8,58 @@
     /* top: 200px; */
 }
 body {
-    max-width: 500px;
+    max-width: 600px;
     margin: 0px auto;
+    
 }
 h1 {
     text-align: center;
     font-size: 40px;
     background: gold;
+    border-radius: 6px;
+}
+
+li {
+    display: block;
+    margin-top: 8px;
+    border: 0.5px solid;
+    background: green;
+    padding: 10px;
+    
+    /* width: 500px; */
 }
 
 #add--btn {
     position: relative;
     top: 400px;
     left: 400px;
-    padding: 10px;
+    width: 60px;
+    padding: 12px;
     border-radius: 50%;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    background: gold;
+    box-shadow: 2px 2px 8px rgb(66, 91, 92);
+}
+
+#add--btn:hover {
+    transform: scale(1.1);
+}
+
+#new--item {
+    margin-left: 260px;
+    padding: 6px;
+    font-size: 0.875rem;
+    border-radius: 4px;
+
+}
+
+#final--add--btn {
+    padding: 6px;
+    font-size: 1rem;
+    border-radius: 25%;
+    background: gold;
+
 }
