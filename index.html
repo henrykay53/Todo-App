@@ -6,20 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
     <link href="todo.css" type="text/css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/519e29d2f2.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <section class="container">
-        <h1>TODO LIST</h1>
-        <ol>
-        
-        </ol>
-        <div id="add--btn">+</div>
-        <form id="Item--form">
-            <input type="text" name="items" placeholder="Add Item..." id="new--item">
-            <!-- <div  id="final--add--btn">+</div> -->
-        </form>
-    </section>
-    
+    <h1>To-do</h1>
+    <ul id="my--list">
+
+    </ul>
+    <form id='list--form'>
+        <input type="text" placeholder="Add item....." id="list--item"/>
+        <input type="submit" id="addBtn" value="+"/>
+    </form>
     <script src="../jquery-3.6.0.js"></script>
     <script src="todo.js"></script>
 </body>

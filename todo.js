@@ -1,27 +1,54 @@
-$(function() {
+// creating close button and appending it to each list item
+var myNodeList = $('li');
+for (var i = 0; i < myNodeList.length; i++) {
+  var span = document.createElement('span');
+  var txt = document.createTextNode("u\00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodeList[i].appendChild(span);
 
-    var $addButton = $('#add--btn');
-    var $form = $('#Item--form');
-    var $textInput = $('input:text');
-    
+};
 
-    $addButton.show();
-    $form.hide();
+//click on close button to hide list item
+var close = $(".close");
+for (var i=0; i < close.length; i++) {
+  close[i].on('click', function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  });
+}
 
-    // $('h1').hide().delay(500).fadeIn(500);
-    // $('#add--btn').hide().delay(500).fadeIn(500);
+// Create a new list item when clicking on the "Add" button
+function newElement() {
 
-    $addButton.on('click', function() {
-        $addButton.hide();
-        $form.show();
-    });
+  var li = document.createElement("li");
+  var inputValue = $("#list--item").val();
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
 
-    $form.on('submit', function(e) {
-        e.preventDefault();
-        var $newText = $('input:text').val();
-        $('ol').append('<li>' + $newText + '</li>');
-        $form.hide();
-        $addButton.show();
-        $textInput.val(' ');
-    });
-});
+  if (inputValue === '') {
+    alert("You must write something!");
+  }
+  else {
+  $("#my--list").appendChild(li);
+  }
+
+  $("#list--item").val('');
+  
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+  
+  for (i = 0; i < close.length; i++) {
+    close[i].on('click', function() {
+      var div = this.parentElement;
+      div.style.display= "none";
+    })
+  }
+}
+ 
+console.log('Hello');
+
+
