@@ -4,7 +4,7 @@ $(function() {
   var listItem = $('input:text');
   var addButton = $('#addBtn');
 
-  addButton.on('click', function() {
+  addButton.on('click', function(e) {
 
     var text = $('input:text').val();
 
@@ -15,7 +15,6 @@ $(function() {
     }
     listItem.val(' ');
   });
-
 });
 
 
